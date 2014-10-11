@@ -3,19 +3,23 @@
   <groupId>net.bpiwowar</groupId>
   <artifactId>fson</artifactId>
   <packaging>jar</packaging>
-  <version>2.3.1-SNAPSHOT</version>
+  <version>2.3.1</version>
   <inceptionYear>2008</inceptionYear>
   <name>Fson</name>
   <parent>
     <groupId>org.sonatype.oss</groupId>
     <artifactId>oss-parent</artifactId>
     <version>9</version>
+    <relativePath />
   </parent>
+
   <url>https://github.com/bpiwowar/gson/</url>
+
   <description>Fork of google Gson library</description>
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
   </properties>
+
   <licenses>
     <license>
       <name>The Apache Software License, Version 2.0</name>
@@ -23,10 +27,11 @@
       <distribution>repo</distribution>
     </license>
   </licenses>
+
   <scm>
-    <connection>scm:svn:http://google-gson.googlecode.com/svn/trunk/gson</connection>
-    <developerConnection>scm:git:ssh://git.code.sf.net/bpiwowar/gson</developerConnection>
     <url>https://github.com/bpiwowar/gson/</url>
+    <connection>scm:git:https://github.com/bpiwowar/gson.git</connection>
+    <developerConnection>scm:git:ssh://git.code.sf.net/bpiwowar/gson</developerConnection>
   </scm>
 
   <issueManagement>
@@ -54,6 +59,7 @@
       <scope>test</scope>
     </dependency>
   </dependencies>
+
   <profiles>
     <!-- Activate PGP signing only when performing a release -->
     <profile>
