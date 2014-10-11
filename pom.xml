@@ -3,7 +3,7 @@
   <groupId>net.bpiwowar</groupId>
   <artifactId>fson</artifactId>
   <packaging>jar</packaging>
-  <version>2.3.1</version>
+  <version>2.3.2-SNAPSHOT</version>
   <inceptionYear>2008</inceptionYear>
   <name>Fson</name>
   <parent>
