@@ -31,7 +31,7 @@
   <scm>
     <url>https://github.com/bpiwowar/gson/</url>
     <connection>scm:git:https://github.com/bpiwowar/gson.git</connection>
-    <developerConnection>scm:git:ssh://git@github.com:bpiwowar/gson.git</developerConnection>
+    <developerConnection>scm:git:git@github.com:bpiwowar/gson.git</developerConnection>
   </scm>
 
   <issueManagement>
