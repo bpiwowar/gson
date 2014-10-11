@@ -1,18 +1,18 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
   <modelVersion>4.0.0</modelVersion>
   <groupId>net.bpiwowar</groupId>
-  <artifactId>gson</artifactId>
+  <artifactId>fson</artifactId>
   <packaging>jar</packaging>
   <version>2.3.1-SNAPSHOT</version>
   <inceptionYear>2008</inceptionYear>
-  <name>Gson</name>
+  <name>Fson</name>
   <parent>
     <groupId>org.sonatype.oss</groupId>
     <artifactId>oss-parent</artifactId>
     <version>9</version>
   </parent>
-  <url>http://code.google.com/p/google-gson/</url>
-  <description>Google Gson library</description>
+  <url>https://github.com/bpiwowar/gson/</url>
+  <description>Fork of google Gson library</description>
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
   </properties>
@@ -25,13 +25,15 @@
   </licenses>
   <scm>
     <connection>scm:svn:http://google-gson.googlecode.com/svn/trunk/gson</connection>
-    <developerConnection>scm:svn:https://google-gson.googlecode.com/svn/trunk/gson</developerConnection>
-    <url>http://google-gson.googlecode.com/svn/trunk/gson</url>
+    <developerConnection>scm:git:ssh://git.code.sf.net/bpiwowar/gson</developerConnection>
+    <url>https://github.com/bpiwowar/gson/</url>
   </scm>
+
   <issueManagement>
-    <system>Google Code Issue Tracking</system>
-    <url>http://code.google.com/p/google-gson/issues/list</url>
+    <system>Github Issue Tracking</system>
+    <url>https://github.com/bpiwowar/gson/issues</url>
   </issueManagement>
+  
   <distributionManagement>
     <snapshotRepository>
       <id>sonatype-nexus-snapshots</id>
@@ -44,10 +46,6 @@
       <url>http://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
     </repository>
   </distributionManagement>
-  <organization>
-    <name>Google, Inc.</name>
-    <url>http://www.google.com</url>
-  </organization>
   <dependencies>
     <dependency>
       <groupId>junit</groupId>
@@ -134,13 +132,13 @@
               <Bundle-RequiredExecutionEnvironment>J2SE-1.5</Bundle-RequiredExecutionEnvironment>
               <Export-Package><![CDATA[com.google.gson;version=${project.version}, com.google.gson.annotations;version=${project.version}, com.google.gson.reflect;version=${project.version}, com.google.gson.stream;version=${project.version}, com.google.gson.internal;version=${project.version}, com.google.gson.internal.bind;version=${project.version}]]></Export-Package>
               <Bundle-Version>${project.version}</Bundle-Version>
-              <Bundle-ContactAddress>http://code.google.com/p/google-gson/</Bundle-ContactAddress>
-              <Bundle-Vendor>Google Gson Project</Bundle-Vendor>
+              <Bundle-ContactAddress>https://github.com/bpiwowar/gson/</Bundle-ContactAddress>
+              <Bundle-Vendor>Forked Gson Project</Bundle-Vendor>
               <Bundle-Name>${project.name}</Bundle-Name>
               <Bundle-Description>${project.description}</Bundle-Description>
               <Bundle-ClassPath>.</Bundle-ClassPath>
               <Bundle-ManifestVersion>2</Bundle-ManifestVersion>
-              <Bundle-SymbolicName>com.google.gson</Bundle-SymbolicName>
+              <Bundle-SymbolicName>net.bpiwowar</Bundle-SymbolicName>
             </manifestEntries>
           </archive>
         </configuration>
@@ -193,40 +191,6 @@
            <show>protected</show>
          </configuration>
        </plugin>
-       <plugin>
-         <groupId>org.apache.maven.plugins</groupId>
-         <artifactId>maven-eclipse-plugin</artifactId>
-         <version>2.9</version>
-         <configuration>
-           <downloadSources>true</downloadSources>
-           <downloadJavadocs>true</downloadJavadocs>
-           <workspace>
-             ../eclipse-ws/
-           </workspace>
-           <workspaceCodeStylesURL>
-             file:///${basedir}/../lib/gson-formatting-styles.xml
-           </workspaceCodeStylesURL>
-         </configuration>
-       </plugin>
-      <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-release-plugin</artifactId>
-        <!-- version>2.5</version -->
-        <configuration>
-          <arguments>-DenableCiProfile=true</arguments>
-          <tagBase>https://google-gson.googlecode.com/svn/tags</tagBase>
-        </configuration>
-      </plugin>
-      <plugin>
-        <artifactId>maven-assembly-plugin</artifactId>
-        <version>2.4.1</version>
-        <configuration>
-          <descriptor>assembly-descriptor.xml</descriptor>
-          <finalName>google-gson-${project.version}</finalName>
-          <outputDirectory>target/dist</outputDirectory>
-          <workDirectory>target/assembly/work</workDirectory>
-        </configuration>
-      </plugin>
     </plugins>
   </build>
   <developers>
@@ -241,6 +205,9 @@
     <developer>
       <name>Jesse Wilson</name>
       <organization>Square Inc.</organization>
+    </developer>
+    <developer>
+      <name>Benjamin Piwowarski</name>
     </developer>
   </developers>
 </project>
