@@ -3,14 +3,14 @@
   <groupId>net.bpiwowar</groupId>
   <artifactId>fson</artifactId>
   <packaging>jar</packaging>
-  <version>2.3.1</version>
+  <version>2.3.1-SNAPSHOT</version>
   <inceptionYear>2008</inceptionYear>
   <name>Fson</name>
   <parent>
     <groupId>org.sonatype.oss</groupId>
     <artifactId>oss-parent</artifactId>
     <version>9</version>
-    <relativePath />
+    <relativePath></relativePath>
   </parent>
 
   <url>https://github.com/bpiwowar/gson/</url>
