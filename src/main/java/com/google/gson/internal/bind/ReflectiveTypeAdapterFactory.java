@@ -174,6 +174,16 @@ public final class ReflectiveTypeAdapterFactory implements AnnotatedTypeAdapterF
 
       T instance = constructor.construct();
 
+      read(in, instance);
+      return instance;
+    }
+
+    public void read(JsonReader in, T instance) throws IOException {
+      if (in.peek() == JsonToken.NULL) {
+        in.nextNull();
+        return;
+      }
+
       try {
         in.beginObject();
         while (in.hasNext()) {
@@ -191,8 +201,8 @@ public final class ReflectiveTypeAdapterFactory implements AnnotatedTypeAdapterF
         throw new AssertionError(e);
       }
       in.endObject();
-      return instance;
     }
+
 
     @Override public void write(JsonWriter out, T value) throws IOException {
       if (value == null) {
